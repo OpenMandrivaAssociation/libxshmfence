@@ -4,7 +4,7 @@
 
 Name: libxshmfence
 Version: 1.1
-Release: 2
+Release: 3
 Source0: ftp://xorg.freedesktop.org/pub/individual/lib/%{name}-%{version}.tar.bz2
 Summary: Shared memory fence support library for X11, needed for DRI3
 URL: http://libxshmfence.sf.net/
