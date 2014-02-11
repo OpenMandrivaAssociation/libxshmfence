@@ -31,7 +31,7 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %setup -q
-%configure
+%configure2_5x
 
 %build
 %make
