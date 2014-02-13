@@ -31,7 +31,8 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %setup -q
-%configure2_5x
+%configure2_5x \
+		--disable-static
 
 %build
 %make
