@@ -11,6 +11,7 @@ URL: http://libxshmfence.sf.net/
 License: GPL
 Group: System/Libraries
 BuildRequires: x11-proto-devel
+BuildRequires: x11-util-macros
 
 %description
 Shared memory fence support library for X11, needed for DRI3
@@ -31,9 +32,9 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %setup -q
-%configure
 
 %build
+%configure
 %make
 
 %install
