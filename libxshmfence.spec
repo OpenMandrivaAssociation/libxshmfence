@@ -21,7 +21,7 @@ Summary: Shared memory fence support library for X11, needed for DRI3
 Group: System/Libraries
 
 %description -n %{libname}
-%{description}
+Shared memory fence support library for X11, needed for DRI3.
 
 %package -n %{devname}
 Summary: Development files for %{name}
