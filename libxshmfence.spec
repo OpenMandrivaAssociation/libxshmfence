@@ -3,8 +3,8 @@
 %define devname %mklibname xshmfence -d
 
 Name: libxshmfence
-Version: 1.2
-Release: 4
+Version: 1.3
+Release: 1
 Source0: http://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.bz2
 Summary: Shared memory fence support library for X11, needed for DRI3
 URL: http://xorg.freedesktop.org/
@@ -14,13 +14,14 @@ BuildRequires: x11-proto-devel
 BuildRequires: x11-util-macros
 
 %description
-Shared memory fence support library for X11, needed for DRI3
+Shared memory fence support library for X11, needed for DRI3.
 
 %package -n %{libname}
 Summary: Shared memory fence support library for X11, needed for DRI3
 Group: System/Libraries
 
 %description -n %{libname}
+%{description}
 
 %package -n %{devname}
 Summary: Development files for %{name}
