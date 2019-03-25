@@ -2,9 +2,11 @@
 %define libname %mklibname xshmfence %{major}
 %define devname %mklibname xshmfence -d
 
+%global optflags %{optflags} -O3
+
 Name: libxshmfence
 Version: 1.3
-Release: 2
+Release: 3
 Source0: http://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.bz2
 Summary: Shared memory fence support library for X11, needed for DRI3
 URL: http://xorg.freedesktop.org/
@@ -32,14 +34,14 @@ Requires: %{libname} = %{EVRD}
 Development files (Headers etc.) for %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
