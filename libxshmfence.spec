@@ -13,48 +13,49 @@
 
 %global optflags %{optflags} -O3
 
-Name: libxshmfence
-Version: 1.3
-Release: 4
-Source0: http://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.bz2
-Summary: Shared memory fence support library for X11, needed for DRI3
-URL: http://xorg.freedesktop.org/
-License: MIT
-Group: System/Libraries
-BuildRequires: x11-proto-devel
-BuildRequires: x11-util-macros
+Summary:	Shared memory fence support library for X11, needed for DRI3
+Name:		libxshmfence
+Version:	1.3.1
+Release:	1
+URL:		http://xorg.freedesktop.org/
+License:	MIT
+Group:		System/Libraries
+Source0:	http://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.xz
+BuildRequires:	pkgconfig(xproto)
+BuildRequires:	pkgconfig(xorg-macros)
 
 %description
 Shared memory fence support library for X11, needed for DRI3.
 
 %package -n %{libname}
-Summary: Shared memory fence support library for X11, needed for DRI3
-Group: System/Libraries
+Summary:	Shared memory fence support library for X11, needed for DRI3
+Group:		System/Libraries
 
 %description -n %{libname}
 Shared memory fence support library for X11, needed for DRI3.
 
 %package -n %{devname}
-Summary: Development files for %{name}
-Group: Development/C
-Requires: %{libname} = %{EVRD}
+Summary:	Development files for %{name}
+Group:		Development/C
+Requires:	%{libname} = %{EVRD}
 
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
 
 %if %{with compat32}
 %package -n %{lib32name}
-Summary: Shared memory fence support library for X11, needed for DRI3 (32-bit)
-Group: System/Libraries
+Summary:	Shared memory fence support library for X11, needed for DRI3 (32-bit)
+Group:		System/Libraries
+BuildRequires:	libc6
 
 %description -n %{lib32name}
 Shared memory fence support library for X11, needed for DRI3.
 
 %package -n %{dev32name}
-Summary: Development files for %{name} (32-bit)
-Group: Development/C
-Requires: %{devname} = %{EVRD}
-Requires: %{lib32name} = %{EVRD}
+Summary:	Development files for %{name} (32-bit)
+Group:		Development/C
+Requires:	%{devname} = %{EVRD}
+Requires:	%{lib32name} = %{EVRD}
 
 %description -n %{dev32name}
 Development files (Headers etc.) for %{name}.
