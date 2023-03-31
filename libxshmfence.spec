@@ -16,7 +16,7 @@
 Summary:	Shared memory fence support library for X11, needed for DRI3
 Name:		libxshmfence
 Version:	1.3.2
-Release:	1
+Release:	2
 URL:		http://xorg.freedesktop.org/
 License:	MIT
 Group:		System/Libraries
