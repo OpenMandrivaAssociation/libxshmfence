@@ -21,6 +21,11 @@ URL:		https://xorg.freedesktop.org/
 License:	MIT
 Group:		System/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.xz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(xproto)
 BuildRequires:	pkgconfig(xorg-macros)
 
